@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TcnFargoTask: FargoTask {
+public class TcnFargoTask: FargoTask {
     let api_key = "3050340951"
     
     override func apiURL() -> String {

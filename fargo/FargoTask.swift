@@ -13,29 +13,29 @@ enum FargoHTTPMethod {
     case GET
 }
 
-class FargoTask: NSObject, NSURLConnectionDataDelegate {
+public class FargoTask: NSObject, NSURLConnectionDataDelegate {
     
     var url: String?
     
     var errorBlock: (NSError? -> Void)?
     var successBlock: ((String, String) -> Void)?
     
-    func shorten(url: String) -> FargoTask {
+    public func shorten(url: String) -> FargoTask {
         self.url = url
         return self
     }
     
-    func success(s: (String, String) -> Void) -> FargoTask {
+    public func success(s: (String, String) -> Void) -> FargoTask {
         successBlock = s
         return self
     }
     
-    func error(e: NSError? -> Void) -> FargoTask {
+    public func error(e: NSError? -> Void) -> FargoTask {
         errorBlock = e
         return self
     }
     
-    func fargo() {
+    public func fargo() {
         
         // if url is nil, shouldn't fargo
         guard self.url != nil else {

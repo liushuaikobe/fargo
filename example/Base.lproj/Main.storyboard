@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://blog.vars.me" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfM-JN-5wD">
+                                <rect key="frame" x="60" y="60" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Gq-jM-O6T">
+                                <rect key="frame" x="281" y="130" width="39" height="30"/>
+                                <state key="normal" title="Fargo"/>
+                                <connections>
+                                    <action selector="fargoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjD-IE-5rs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="goo.gl: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="18s-mY-8xu">
+                                <rect key="frame" x="40" y="200" width="520" height="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t.cn: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="JY4-fv-hJK">
+                                <rect key="frame" x="40" y="237" width="520" height="17"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vCq-ey-FFz">
+                                <rect key="frame" x="330" y="135" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JY4-fv-hJK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="1p4-L8-zrH"/>
+                            <constraint firstItem="0Gq-jM-O6T" firstAttribute="top" secondItem="mfM-JN-5wD" secondAttribute="bottom" constant="40" id="G7f-Pu-iOB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mfM-JN-5wD" secondAttribute="trailing" constant="40" id="GFL-AK-ATE"/>
+                            <constraint firstItem="mfM-JN-5wD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="KXB-0O-GjC"/>
+                            <constraint firstItem="vCq-ey-FFz" firstAttribute="leading" secondItem="0Gq-jM-O6T" secondAttribute="trailing" constant="10" id="Mex-JP-Uoo"/>
+                            <constraint firstItem="18s-mY-8xu" firstAttribute="top" secondItem="0Gq-jM-O6T" secondAttribute="bottom" constant="40" id="Osb-B2-d3N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="18s-mY-8xu" secondAttribute="trailing" constant="20" id="QcA-EH-vtm"/>
+                            <constraint firstItem="18s-mY-8xu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ViW-Yr-h14"/>
+                            <constraint firstItem="vCq-ey-FFz" firstAttribute="centerY" secondItem="0Gq-jM-O6T" secondAttribute="centerY" id="ag1-4Q-BVH"/>
+                            <constraint firstItem="mfM-JN-5wD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="g0K-Ea-Btp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JY4-fv-hJK" secondAttribute="trailing" constant="20" id="joF-gf-RZI"/>
+                            <constraint firstItem="JY4-fv-hJK" firstAttribute="top" secondItem="18s-mY-8xu" secondAttribute="bottom" constant="20" id="kiN-fi-o49"/>
+                            <constraint firstItem="0Gq-jM-O6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vyM-JF-Icg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="googlResultLabel" destination="18s-mY-8xu" id="PEh-f4-VVw"/>
+                        <outlet property="indicator" destination="vCq-ey-FFz" id="Oxj-US-haH"/>
+                        <outlet property="tcnResultLabel" destination="JY4-fv-hJK" id="PMc-ED-Qug"/>
+                        <outlet property="urlTextField" destination="mfM-JN-5wD" id="X46-fl-zgN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="466" y="389"/>
+        </scene>
+    </scenes>
+</document>

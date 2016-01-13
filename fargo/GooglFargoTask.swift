@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GooglFargoTask: FargoTask {
+public class GooglFargoTask: FargoTask {
     
     let api_key = "AIzaSyBSwbXhKQFzeD7PKH1XLfHLQkjRZNkjo-k"
     
