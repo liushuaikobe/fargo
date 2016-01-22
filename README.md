@@ -19,15 +19,17 @@ Fargo has already integrated two built-in URL shorten serivces:
 
 And, you could add your own service easily.
 
-	GooglFargoTask("YOUR_API_KEY").shorten("http://github.com/liushuaikobe")
+```swift
+GooglFargoTask("YOUR_API_KEY").shorten("http://github.com/liushuaikobe")
 	.success {
 		origin, shorten in
 		// do something with shorten result
-    }.error {
+    	}.error {
 		error in
 		// error handling
-    }.fargo()
-    
+    	}.fargo()
+```
+
 ## Advanced
 
 To add your own URL shorten serivce (support GET/POST on HTTP(S) currently), just inherit from `FargoTask` and overide some methods, see [`GooglFargoTask`](https://github.com/liushuaikobe/fargo/blob/master/fargo/GooglFargoTask.swift) for POST example and [`TcnFargoTask`](https://github.com/liushuaikobe/fargo/blob/master/fargo/TcnFargoTask.swift) for GET example.
