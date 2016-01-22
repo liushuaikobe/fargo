@@ -24,7 +24,7 @@ class GooglTaskTests: XCTestCase {
         
         let expectation = self.expectationWithDescription("Fargo Successfully")
         
-        GooglFargoTask().shorten("http://www.google.com/").success {
+        GooglFargoTask("AIzaSyBSwbXhKQFzeD7PKH1XLfHLQkjRZNkjo-k").shorten("http://www.google.com/").success {
             url, result in
             
             XCTAssertEqual(url, "http://www.google.com/")

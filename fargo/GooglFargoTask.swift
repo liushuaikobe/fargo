@@ -10,7 +10,11 @@ import Foundation
 
 public class GooglFargoTask: FargoTask {
     
-    let api_key = "AIzaSyBSwbXhKQFzeD7PKH1XLfHLQkjRZNkjo-k"
+    let api_key: String
+    
+    public init(_ apiKey: String) {
+        api_key = apiKey
+    }
     
     override func apiURL() -> String {
         return "https://www.googleapis.com/urlshortener/v1/url?key=\(api_key)"

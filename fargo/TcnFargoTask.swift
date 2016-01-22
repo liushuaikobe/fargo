@@ -9,7 +9,11 @@
 import Foundation
 
 public class TcnFargoTask: FargoTask {
-    let api_key = "3050340951"
+    let api_key: String
+    
+    public init(_ apiKey: String) {
+        api_key = apiKey
+    }
     
     override func apiURL() -> String {
         return "http://api.t.sina.com.cn/short_url/shorten.json"

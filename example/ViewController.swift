@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             self.googlResultLabel.text = nil
             self.tcnResultLabel.text = nil;
             
-            GooglFargoTask().shorten(url).success {
+            GooglFargoTask("AIzaSyBSwbXhKQFzeD7PKH1XLfHLQkjRZNkjo-k").shorten(url).success {
                 origin, shorten in
                 self.setResult(shorten, forResultLabel: self.googlResultLabel)
             }.error {
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
                 self.setError(error, forResultLabel: self.googlResultLabel)
             }.fargo()
             
-            TcnFargoTask().shorten(url).success {
+            TcnFargoTask("3050340951").shorten(url).success {
                 origin, shorten in
                 self.setResult(shorten, forResultLabel: self.tcnResultLabel)
             }.error {

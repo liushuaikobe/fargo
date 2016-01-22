@@ -22,7 +22,7 @@ class TcnTaskTests: XCTestCase {
     func testFargo() {
         let expectation = self.expectationWithDescription("Fargo Successfully")
         
-        TcnFargoTask().shorten("http://www.google.com/").success {
+        TcnFargoTask("3050340951").shorten("http://www.google.com/").success {
             url, result in
             
             XCTAssertEqual(url, "http://www.google.com/")
