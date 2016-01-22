@@ -21,13 +21,13 @@ And, you could add your own service easily.
 
 ```swift
 GooglFargoTask("YOUR_API_KEY").shorten("http://github.com/liushuaikobe")
-	.success {
-		origin, shorten in
-		// do something with shorten result
-    	}.error {
-		error in
-		// error handling
-    	}.fargo()
+    .success {
+        origin, shorten in
+        // do something with shorten result
+    }.error {
+        error in
+        // error handling
+    }.fargo()
 ```
 
 ## Advanced
